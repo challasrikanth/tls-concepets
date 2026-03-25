@@ -84,6 +84,7 @@ openssl pkey -in private.pem -pubout -out public.pem
 Generate CSR — signed by the private key
 ```bash
 openssl req -new -key private.pem -config san.cnf -out csr.pem
+openssl req -new -key private.pem  -out csr.pem (using private key)
 ```
 
 Sign it using our own private key — hence the term self-signed
